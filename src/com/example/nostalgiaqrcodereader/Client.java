@@ -11,7 +11,6 @@ import android.util.Log;
 public class Client implements Runnable {
         
       private static byte[]receivedata=new byte[1024];
-      //private static Datagrampacket recv_packet;  
       private static String sendData;
       private static String ipAddress;
        

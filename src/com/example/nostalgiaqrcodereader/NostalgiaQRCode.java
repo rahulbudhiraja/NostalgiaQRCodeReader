@@ -56,14 +56,6 @@ public class NostalgiaQRCode extends Activity {
 
 		}
 		
-//		Intent intent = new Intent("com.google.zxing.client.android.SCAN");
-//		 intent.setPackage("com.google.zxing.client.android");
-//		 intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
-//		intent.putExtra("com.google.zxing.client.android.SCAN.SCAN_MODE", "QR_CODE_MODE");
-//		intent.putExtra("SCAN_WIDTH", 1280);
-//		intent.putExtra("SCAN_HEIGHT", 768);
-//		intent.putExtra("SAVE_HISTORY",false);
-//		startActivityForResult(intent, 0);
 	}
 	
 	public void onActivityResult(int requestCode, int resultCode, Intent intent) 
@@ -77,9 +69,9 @@ public class NostalgiaQRCode extends Activity {
 	            String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
 	            Log.i("xZing", "contents: "+contents+" format: "+format);
 	           
-	            new Thread(new Client(contents,"rahul-macbook-pro.media.mit.edu")).start();// Handle successful scan
-	           // new Thread(new Client(contents,"18.85.58.122")).start();
-	            
+                /* Insert ip of machine running the Openframeworks application */
+	            new Thread(new Client(contents,"192.186.1.1")).start();// Handle successful scan
+	          	            
 	        	startActivityForResult(intent, 0);
 	            
 	        } 
